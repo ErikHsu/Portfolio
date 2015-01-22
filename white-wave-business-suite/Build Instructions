@@ -1,0 +1,102 @@
+Follow these steps if you are using windows to set up the build environment for the group project.
+
+Download:
+ 
+jdk-8u25 - Java development kit version 8 update 25 or whatever the newest version is. We 
+should all use java 8 because lambda functions are going to make swing code look so much prettier.
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+
+eclipse 4.4.1 - The newest version of eclipse is compatable with java 8 and the UI is changed around.
+Use this so we know how to help eachother set things up and the buttons are all in the same place ect.
+https://www.eclipse.org/downloads/ - Eclipse IDE for Java Developers
+
+TortoiseHg 3.2 - Mercurial in windows with a gui if you aren’t totally comfortable with the command line version.
+http://tortoisehg.bitbucket.org/download/index.html
+
+mercurialeclipse 2.1 - Mercurial plugin for eclipse. 
+Open eclipse. Help ---> Eclipse Marketplace and search for "mercurial eclipse" Install version 2.1.
+
+MySQL workbench 6.2.3 - MySQL client
+http://dev.mysql.com/downloads/file.php?id=453786 - Don't make an account just click on No thanks at the bottom.
+I had to install Microsoft Visual 2013 for this new version of workbench didn't take that long though. It will 
+tell you what you don't have if you just run the installer.
+
+MySQL server 5.6.21.1 - MySQL server
+http://dev.mysql.com/downloads/file.php?id=454044 - same thing don't make an account just click on NO thanks.
+Install everything except C++ and samples.
+
+JDBC 5.1.24 - MySQL java driver
+http://dev.mysql.com/downloads/file.php?id=454395 - this should have been downloaded in the last step but make sure 
+you've got it.
+
+Visual Paradigm - UML/ERD ect modeling software. Download the community edition it looks really nice and professional, 
+kind of a big download though. Seems very easy to use and you can export to png for free it just says community edition 
+in the top corner. Let me know if you guys want to use different modeling software.
+http://www.visual-paradigm.com/download/community.jsp
+
+e(fx)clipse - tool that has templates and things for visually creating javafx appications with css in eclipse
+I'm following the tutorial here http://code.makery.ch/java/javafx-8-tutorial-part1/
+Install by going to Help -> Eclipse Marketplace and searching for e(fx)clipse
+
+Scene Builder - visually create javafx applications 
+I'm following the tutorial here http://code.makery.ch/java/javafx-8-tutorial-part1/
+Install at http://www.oracle.com/technetwork/java/javase/downloads/sb2download-2177776.html
+
+Setting up mercurial eclipse:
+1.	Open eclipse File -> new -> other -> mercurial -> clone existing mercurial repository
+2.	Set the url to the bitbucket repository fill in your username and password
+3.	Click next than finish
+4.	Right click on the project folder that you just made
+5.	Go to Team -> push
+6.	Set the URL to the remote bitbucket repository, find this in the top right corner of your bitbucket
+	after you click on the white wave project on the website for me it is https://akerbow@bitbucket.org/aesa/white-wave-business-suite
+	put your version in the url field set user name and password than press finish
+7.	Right click on your project again Team -> pull and do the same thing
+8.	That’s it everything is linked up you have a local mercurial repository linked to eclipse
+	which is also linked to the group remote repository on bitbucket
+
+Setting up TortoiseHg: 
+If you have never used mercurial or just want quick refresher there is a great easy tutorial from the people who make
+it at hginit.com. Click on ground up mercurial not the re-education one unless you are interested or know about the
+history of version control systems. BEFORE starting the tutorial set up TortoiseHg because the tutorial assumes you 
+are using a command line. We have to set some things up first because we are not using a unix system. 
+1.	Open TortoiseHg workbench.
+2.	In TortoiseHG go to File --> open repository 
+3. 	Open the repository you cloned when you set up eclipse (it should be in your user/workspace directory unless you changed the path)
+4.	Before you do any commits make sure you got to File --> settings --> commit and set up your name and email. 
+	Mercurial doesn’t like it if you don’t do this. Should be something like Austin Kerbow <amkerbow@gmail.com> where it says username
+More info on TortoiseHg at http://tortoisehg.bitbucket.org/manual/1.1/quick.html
+
+Contributing:
+The awesome thing about version control is that every single change is tracked and we can always go back to them. So you never have to 
+worry about losing anything, it’s impossible to screw up.
+1.	PULL from the remote repository as often as you can. Make sure before you add anything you have the latest changes.
+	a.	In TortoiseHg    Repository -> Synchronize -> pull
+	b.	In eclipse           Right click on project -> Team -> pull
+2.	To commit changes to existing files
+	a.	In TortoiseHg    pull to get latest changes -> make sure the file is checked in the box on the left -> click commit -> Synchronize -> Push
+	b.	In Eclipse          pull to get latest changes -> right click on project -> Team -> commit -> Team -> push
+3.	To add a new file and commit it
+	a.	In TortoiseHg    pull to get latest changes -> find the new file in the box on the left and check it -> right click it and press 
+		add(if you don’t see it click the refresh button above Type) -> click commit -> Synchronize -> Push
+	b.	In Eclipse          pull to get the latest changes -> right click on new file -> Team -> add -> right click on project -> Team -> Commit -> Team -> Push
+
+If the project isn't showing up in eclipse:
+1. delete the project completly from the disk(go into user/workspace and delete the project folder)
+2. In eclipse File->new->other->clone mercurial repository and clone the bit bucket repo
+3. In eclipse file->import->existing project and find the project folder you just cloned in your user/workspace directory
+
+How to get the database to work / Hibernate:
+1. Open your mysql workbench if you look in wwbs/hibernate.cfg.xml you see that you need a MySQL user named "testtech"
+   with the password "wwbusiness".
+2. Start your MySQL server
+3. In the workbench login as root
+4. Under management go to users and privileges 
+5. Click on add account in the bottom left
+6. Login name = testtech
+7. password = wwbusiness
+8. go to the administrative rolls tab and click on the DBA check-box to give all privileges to the new user
+9. click apply and now try to run HibernateTest.java
+
+How to setup javafx/e(fx)clipse/Scene Builder 2.0
+Follow this tutorial http://code.makery.ch/java/javafx-8-tutorial-part1/

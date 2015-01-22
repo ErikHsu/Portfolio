@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(#38424b 0%, #1f2429 100%, #191d22 100%);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.NewSupportEvent.NewSupportEventController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <StackPane prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="492.0" prefWidth="700.0" StackPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="268.0" minWidth="0.0" prefWidth="181.0" />
+                      <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="577.0" minWidth="5.0" prefWidth="519.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                      <RowConstraints />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="70.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="70.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="70.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="70.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" maxHeight="210.0" minHeight="10.0" prefHeight="210.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" maxHeight="70.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" maxHeight="65.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+                        <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="70.0" vgrow="NEVER" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="23.0" prefWidth="309.0" text="Comments:" textFill="WHITE" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="10.0" layoutY="92.0" prefHeight="23.0" prefWidth="268.0" text="Support Event Name:" textFill="WHITE" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="supportEventNameField" prefHeight="25.0" prefWidth="517.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addNewSupportEvent" prefHeight="26.0" prefWidth="261.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-font-size: 11px; -fx-padding: 5 10 5 10;" text="Create Support Event" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <GridPane.margin>
+                              <Insets left="320.0" right="50.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Century" size="11.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="528.0" layoutY="365.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="147.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-font-size: 11px; -fx-padding: 5 10 5 10;" text="Exit" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="Century" size="11.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="40.0" right="40.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label contentDisplay="CENTER" prefHeight="46.0" prefWidth="553.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-font-size: 24px; -fx-padding: 10 20 10 20;" text="Add New Support Event" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Century" size="24.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextArea fx:id="commentsField" prefHeight="200.0" prefWidth="610.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextArea>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="268.0" text="  Ticket:" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="268.0" text="  Creation Date:" textFill="WHITE" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="268.0" text="  Hours Spent:" textFill="WHITE" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Century" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="ticketField" editable="false" layoutX="191.0" layoutY="78.0" prefHeight="25.0" prefWidth="517.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="creationDateField" editable="false" layoutX="191.0" layoutY="128.0" prefHeight="25.0" prefWidth="517.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="hoursSpentField" layoutX="191.0" layoutY="179.0" prefHeight="25.0" prefWidth="517.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

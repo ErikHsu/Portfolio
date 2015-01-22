@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="970.0" style="-fx-background-color: #ECECEC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SupportEvent.SupportEventController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane dividerPositions="0.25846153846153846" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: #ECECEC;" BorderPane.alignment="CENTER_LEFT">
+              <items>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" StackPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-font-size: 14px; -fx-padding: 10 20 10 20; -fx-background-radius: 20 20 0 0;" text="Support Events" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TreeView fx:id="supportEventTreeView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="452.0" prefWidth="247.0" style="-fx-background-color: #ECECEC;" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT">
+                     <children>
+                        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <children>
+                              <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-font-size: 14px; -fx-padding: 10 20 10 20; -fx-background-radius: 20 20 0 0;" text="Support Event Overview" textFill="WHITE">
+                                 <font>
+                                    <Font name="Century" size="14.0" />
+                                 </font>
+                              </Label>
+                              <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="452.0" prefWidth="493.0" style="-fx-background-color: linear-gradient(#38424b 0%, #1f2429 100%, #191d22 100%);" VBox.vgrow="ALWAYS">
+                                 <top>
+                                    <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="TOP_RIGHT" />
+                                 </top>
+                                 <bottom>
+                                    <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="53.0" prefWidth="117.0" BorderPane.alignment="TOP_CENTER">
+                                      <columnConstraints>
+                                          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="120.0" />
+                                          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="120.0" />
+                                          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="120.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="50.0" valignment="CENTER" vgrow="NEVER" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Button fx:id="openSupportEventButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#expandSupportEvent" prefHeight="20.0" prefWidth="100.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-padding: 5 10 5 10;" text="Open Event" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                             <font>
+                                                <Font name="Century" size="10.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="newSupportEventButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#showNewSupportEventView" prefHeight="20.0" prefWidth="100.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-padding: 5 10 5 10;" text="New Event" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                             <font>
+                                                <Font name="Century" size="10.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="refreshButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#refreshSupportEvents" prefHeight="20.0" prefWidth="100.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-padding: 5 10 5 10;" text="Refresh Events" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                                             <font>
+                                                <Font name="Century" size="10.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </GridPane.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                          <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="260.0" layoutY="24.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" style="-fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.9) , 1, 0.0 , 0 , 1 ); -fx-background-color: #090a0c,        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),        linear-gradient(#20262b, #191d22),        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0)); -fx-background-radius: 5,4,3,5; -fx-background-insets: 0,1,2,0; -fx-text-fill: white; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 ); -fx-text-fill: linear-gradient(white, #d0d0d0); -fx-padding: 5 10 5 10;" text="Exit" GridPane.columnIndex="3">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <font>
+                                                <Font name="Century" size="10.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </GridPane>
+                                 </bottom>
+                                 <left>
+                                    <GridPane alignment="CENTER" gridLinesVisible="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="412.0" prefWidth="509.0" BorderPane.alignment="CENTER">
+                                      <columnConstraints>
+                                        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="ALWAYS" maxWidth="239.0" minWidth="0.0" prefWidth="175.0" />
+                                        <ColumnConstraints hgrow="ALWAYS" maxWidth="401.0" minWidth="0.0" prefWidth="312.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="107.0" minHeight="55.0" prefHeight="55.0" vgrow="NEVER" />
+                                        <RowConstraints maxHeight="225.0" minHeight="60.0" prefHeight="225.0" vgrow="NEVER" />
+                                          <RowConstraints maxHeight="189.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+                                          <RowConstraints maxHeight="189.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="Support Event Name:" textFill="WHITE">
+                                             <font>
+                                                <Font name="Century" size="16.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="20.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label text="Comments:" textFill="WHITE" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Century" size="16.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets right="20.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <TextField fx:id="supportEventNameField" GridPane.columnIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </TextField>
+                                          <TextArea fx:id="supportEventCommentsField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets right="50.0" />
+                                             </GridPane.margin>
+                                          </TextArea>
+                                       </children>
+                                    </GridPane>
+                                 </left>
+                              </BorderPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <StackPane>
+               <children>
+                  <ToolBar fx:id="breadCumbBar" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#38424b 0%, #1f2429 100%, #191d22 100%);">
+                     <items>
+                        <ToolBar fx:id="breadCumbBar1" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(#38424b 0%, #1f2429 100%, #191d22 100%);" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </StackPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
